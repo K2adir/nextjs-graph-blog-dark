@@ -2,12 +2,14 @@ import React from "react";
 import Provider from "../context/context";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import PageHead from "./PageHead";
 
 const Layout = ({ children }) => {
   return (
     <Provider>
+      <PageHead />
       <Navbar />
-      <main className="min-h-screen h-full w-full scroll-smooth antialiased bg-neutral-900">
+      <main className="min-h-screen h-full w-full scroll-smooth antialiased dark:bg-neutral-900 bg-neutral-200">
         {children}
       </main>
       <Footer />

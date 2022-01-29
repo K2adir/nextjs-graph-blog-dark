@@ -3,18 +3,24 @@ import React from "react";
 import { MenuIcon } from "@heroicons/react/outline";
 import { useProvider } from "../context/context";
 import { Transition } from "@headlessui/react";
+import { useTheme } from "../context/theme";
 
 const Navbar = () => {
   const { isOpen, setIsOpen } = useProvider();
+  const { theme, setTheme } = useTheme();
+
+  const themeHandler = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   return (
-    <section className="bg-neutral-900 text-neutral-100">
+    <section className="dark:bg-neutral-900 bg-neutral-200 dark:text-neutral-100 text-neutral-800">
       <header className="lg:py-8 sm:py-6 py-4">
         <nav className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4">
           <div className="sm:flex sm:flex-row flex flex-col justify-between items-center">
             <div className="flex items-center justify-between w-full">
               <span>
                 <svg
-                  className="h-12 w-12 fill-teal-600"
+                  className="h-12 w-12 dark:fill-teal-400 fill-teal-700"
                   viewBox="0 0 154 154"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -29,22 +35,25 @@ const Navbar = () => {
                 <MenuIcon className="h-8 w-8" />
               </button>
             </div>
-            <div className="sm:flex hidden sm:space-x-4 space-y-4 sm:space-y-0 w-full sm:w-auto py-5 sm:py-0 sm:bg-neutral-900 bg-neutral-700 rounded-lg mt-3 sm:mt-0">
+            <div className="sm:flex hidden sm:space-x-4 space-y-4 sm:space-y-0 w-full sm:w-auto py-5 sm:py-0  dark:bg-neutral-900 bg-neutral-200 rounded-lg mt-3 sm:mt-0">
               <Link href="/">
-                <a className="text-neutral-300 md:text-lg hover:text-neutral-100 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
-                  Home
+                <a className="dark:text-neutral-300 text-neutral-700 md:text-lg dark:hover:text-neutral-100 hover:text-neutral-500 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
+                  Blog
                 </a>
               </Link>
               <Link href="/">
-                <a className="text-neutral-300 md:text-lg hover:text-neutral-100 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
+                <a className="dark:text-neutral-300 text-neutral-700 md:text-lg dark:hover:text-neutral-100 hover:text-neutral-500 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
                   Bookmarks
                 </a>
               </Link>
               <Link href="/">
-                <a className="text-neutral-300 md:text-lg hover:text-neutral-100 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
+                <a className="dark:text-neutral-300 text-neutral-700 md:text-lg dark:hover:text-neutral-100 hover:text-neutral-500 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
                   Movies
                 </a>
               </Link>
+              <button className="" onClick={themeHandler}>
+                D
+              </button>
             </div>
           </div>
           <Transition
@@ -65,7 +74,7 @@ const Navbar = () => {
             >
               <Link href="/">
                 <a className="text-neutral-300 md:text-lg hover:text-neutral-100 transition-all duration-200 ease-in-out transform ml-3 sm:ml-0 block p-2">
-                  Home
+                  Blog
                 </a>
               </Link>
               <Link href="/">

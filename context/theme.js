@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 
 const getInitialTheme = () => {
   if (typeof window !== "undefined" && window.localStorage) {
@@ -14,13 +14,13 @@ const getInitialTheme = () => {
   }
 
   // If you want to use dark theme as the default, return 'dark' instead
-  return "light";
+  return "dark";
 };
 
-export const ThemeContext = React.createContext();
+const ThemeContext = createContext();
 
-export const ThemeProvider = ({ initialTheme, children }) => {
-  const [theme, setTheme] = React.useState(getInitialTheme);
+const ThemeProvider = ({ initialTheme, children }) => {
+  const [theme, setTheme] = useState(getInitialTheme);
 
   const rawSetTheme = (rawTheme) => {
     const root = window.document.documentElement;
@@ -36,7 +36,7 @@ export const ThemeProvider = ({ initialTheme, children }) => {
     rawSetTheme(initialTheme);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     rawSetTheme(theme);
   }, [theme]);
 
@@ -46,3 +46,7 @@ export const ThemeProvider = ({ initialTheme, children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export const useTheme = () => useContext(ThemeContext);
+
+export default ThemeProvider;
