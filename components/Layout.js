@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <Provider>
       <PageHead />
       <Navbar />
-      <main className="min-h-screen h-full w-full scroll-smooth antialiased dark:bg-neutral-900 bg-neutral-200">
+      <main className="min-h-screen h-full w-full scroll-smooth antialiased dark:bg-neutral-900 bg-neutral-200 dark:selection:bg-teal-400 selection:bg-teal-700 dark:selection:text-neutral-800 selection:text-neutral-200">
         {children}
       </main>
       <Footer />
