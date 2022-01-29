@@ -35,6 +35,8 @@ const Navbar = () => {
             <div className="sm:flex items-center hidden sm:space-x-4 space-y-4 sm:space-y-0 w-full sm:w-auto py-5 sm:py-0  dark:bg-neutral-900 bg-neutral-200 rounded-lg mt-3 sm:mt-0">
               <NavLink href="/">Blog</NavLink>
               <NavLink href="/">Bookmarks</NavLink>
+              <NavLink href="/">Contact</NavLink>
+
               <DarkMode />
             </div>
           </div>
@@ -50,12 +52,16 @@ const Navbar = () => {
             <div
               className={`${
                 isOpen
-                  ? "sm:hidden space-y-4 py-5 sm:py-0 bg-neutral-700 rounded-lg mt-3"
+                  ? "sm:hidden space-y-4 py-5 pl-4 sm:py-0 bg-neutral-700 rounded-lg mt-3"
                   : "hidden"
               }`}
             >
               <NavLink href="/">Blog</NavLink>
               <NavLink href="/">Bookmarks</NavLink>
+              <NavLink href="/">Contact</NavLink>
+              <center>
+                <DarkMode />
+              </center>
             </div>
           </Transition>
         </nav>
