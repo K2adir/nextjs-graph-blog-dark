@@ -23,8 +23,8 @@ const Footer = () => {
               <span className="lg:text-3xl sm:text-2xl text-xl">Frus</span>
             </div>
           </Link>
-          <div className="lg:flex items-center mt-8 lg:mt-0 lg:justify-end">
-            <div className="flex space-x-4 items-center">
+          <div className="mt-8 lg:mt-0">
+            <div className="flex space-x-4 items-center justify-center">
               <NavLink href="/">Blog</NavLink>
               <NavLink href="/">Bookmarks</NavLink>
               <NavLink href="/">Contact</NavLink>

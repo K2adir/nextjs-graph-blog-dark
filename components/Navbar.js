@@ -1,13 +1,19 @@
 import Link from "next/link";
 import React from "react";
-import { MenuIcon } from "@heroicons/react/outline";
+import { MenuIcon, MoonIcon, SunIcon } from "@heroicons/react/outline";
 import { useProvider } from "../context/context";
 import { Transition } from "@headlessui/react";
 import NavLink from "../ui/NavLink";
-import DarkMode from "../ui/DarkMode";
+import { useTheme } from "../context/theme";
 
 const Navbar = () => {
   const { isOpen, setIsOpen } = useProvider();
+
+  const { theme, setTheme } = useTheme();
+
+  const themeHandler = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
     <section className="dark:bg-neutral-900 bg-neutral-200 dark:text-neutral-100 text-neutral-800 dark:selection:bg-teal-400 selection:bg-teal-700 dark:selection:text-neutral-800 selection:text-neutral-200">
@@ -37,7 +43,17 @@ const Navbar = () => {
               <NavLink href="/">Bookmarks</NavLink>
               <NavLink href="/">Contact</NavLink>
 
-              <DarkMode />
+              <button
+                className="border h-7 w-7 inline-flex items-center justify-center border-neutral-500 rounded-lg focus:outline-2 focus:outline-transparent 
+  focus:ring transition-all ease-in-out duration-200 transform focus:border-transparent dark:focus:ring-teal-400 focus:ring-teal-700"
+                onClick={themeHandler}
+              >
+                {theme === "light" ? (
+                  <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                ) : (
+                  <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                )}
+              </button>
             </div>
           </div>
           <Transition
@@ -60,7 +76,17 @@ const Navbar = () => {
               <NavLink href="/">Bookmarks</NavLink>
               <NavLink href="/">Contact</NavLink>
               <center>
-                <DarkMode />
+                <button
+                  className="border h-7 w-7 inline-flex items-center justify-center border-neutral-500 rounded-lg focus:outline-2 focus:outline-transparent 
+  focus:ring transition-all ease-in-out duration-200 transform focus:border-transparent dark:focus:ring-teal-400 focus:ring-teal-700"
+                  onClick={themeHandler}
+                >
+                  {theme === "light" ? (
+                    <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                  ) : (
+                    <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                  )}
+                </button>
               </center>
             </div>
           </Transition>
