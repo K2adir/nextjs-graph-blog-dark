@@ -50,7 +50,10 @@ const Navbar = () => {
                 onClick={themeHandler}
               >
                 {theme === "light" ? (
-                  <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                  <>
+                    <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                    <span className="sr-only">Dark</span>
+                  </>
                 ) : (
                   <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
                 )}
