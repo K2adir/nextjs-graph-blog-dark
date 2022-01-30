@@ -14,7 +14,7 @@ const Post = ({ post }) => {
               layout="fill"
               objectFit="cover"
               alt="Featured Post"
-              priority
+              loading="lazy"
             />
           </div>
         </div>
