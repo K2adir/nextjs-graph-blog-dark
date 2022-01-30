@@ -27,6 +27,7 @@ const Footer = () => {
             <div className="flex space-x-4 items-center justify-center">
               <NavLink href="/">Blog</NavLink>
               <NavLink href="/">Bookmarks</NavLink>
+              <NavLink href="/">Dashboard</NavLink>
               <NavLink href="/">Contact</NavLink>
               <Link href="https://twitter.com/frusdev">
                 <a>
