@@ -11,11 +11,12 @@ const FeaturedPost = ({ post }) => {
         <div className="grid md:grid-cols-2 grid-cols-1 items-center lg:items-stretch lg:gap-x-12 gap-x-6 gap-y-5">
           <Link href={`./post/${post.slug}`}>
             <div className="overflow-hidden sm:rounded-xl cursor-pointer">
-              <div className="aspect-[4/3] min-h-[400px] relative">
+              <div className="aspect-video min-h-[400px] relative">
                 <Image
                   src={post.featuredImage.url}
                   layout="fill"
                   objectFit="cover"
+                  objectPosition="center"
                   alt="Featured Post"
                   priority
                 />

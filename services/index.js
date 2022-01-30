@@ -39,7 +39,9 @@ export const getPostDetails = async (slug) => {
         }
         featuredPost
         content {
+          markdown
           raw
+          html
         }
       }
     }

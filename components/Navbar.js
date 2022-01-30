@@ -68,7 +68,7 @@ const Navbar = () => {
             <div
               className={`${
                 isOpen
-                  ? "sm:hidden space-y-4 py-5 pl-4 sm:py-0 bg-neutral-700 rounded-lg mt-3"
+                  ? "sm:hidden space-y-4 py-5 pl-4 sm:py-0 dark:bg-neutral-700 bg-neutral-400 text-neutral-800 rounded-lg mt-3"
                   : "hidden"
               }`}
             >
@@ -82,9 +82,9 @@ const Navbar = () => {
                   onClick={themeHandler}
                 >
                   {theme === "light" ? (
-                    <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                    <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-800" />
                   ) : (
-                    <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                    <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-800" />
                   )}
                 </button>
               </center>
