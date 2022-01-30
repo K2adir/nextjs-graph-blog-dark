@@ -83,13 +83,16 @@ const Navbar = () => {
               <center>
                 <button
                   className="border h-7 w-7 inline-flex items-center justify-center border-neutral-500 rounded-lg focus:outline-2 focus:outline-transparent 
-  focus:ring transition-all ease-in-out duration-200 transform focus:border-transparent dark:focus:ring-teal-400 focus:ring-teal-700"
+                            focus:ring transition-all ease-in-out duration-200 transform focus:border-transparent dark:focus:ring-teal-400 focus:ring-teal-700"
                   onClick={themeHandler}
                 >
                   {theme === "light" ? (
-                    <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-800" />
+                    <>
+                      <MoonIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
+                      <span className="sr-only">Dark</span>
+                    </>
                   ) : (
-                    <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-800" />
+                    <SunIcon className="w-5 h-5 dark:text-neutral-300 text-neutral-700" />
                   )}
                 </button>
               </center>
