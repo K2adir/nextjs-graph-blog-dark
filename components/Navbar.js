@@ -3,7 +3,7 @@ import React from "react";
 import { MenuIcon, MoonIcon, SunIcon } from "@heroicons/react/outline";
 import { useProvider } from "../context/context";
 import { Transition } from "@headlessui/react";
-import NavLink from "../ui/NavLink";
+import NavLink from "./NavLink";
 import { useTheme } from "../context/theme";
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import NavLink from "../ui/NavLink";
+import NavLink from "./NavLink";
 
 const Footer = () => {
   return (
