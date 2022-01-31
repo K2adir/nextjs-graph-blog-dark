@@ -40,7 +40,7 @@ const Navbar = () => {
             </div>
             <div className="sm:flex items-center hidden sm:space-x-4 space-y-4 sm:space-y-0 w-full sm:w-auto py-5 sm:py-0  dark:bg-neutral-900 bg-neutral-200 rounded-lg mt-3 sm:mt-0">
               <NavLink href="/">Blog</NavLink>
-              <NavLink href="/bookmarks">Bookmarks</NavLink>
+              <NavLink href="/">Bookmarks</NavLink>
               <NavLink href="/">Dashboard</NavLink>
               <NavLink href="/">Contact</NavLink>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
               }`}
             >
               <NavLink href="/">Blog</NavLink>
-              <NavLink href="/bookmarks">Bookmarks</NavLink>
+              <NavLink href="/">Bookmarks</NavLink>
               <NavLink href="/">Dashboard</NavLink>
               <NavLink href="/">Contact</NavLink>
               <center>
