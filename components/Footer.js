@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
           </Link>
           <div className="mt-8 lg:mt-0">
-            <div className="flex space-x-4 items-center justify-center">
+            <div className="flex flex-col sm:space-x-4 items-center justify-center">
               <NavLink href="/">Blog</NavLink>
               <NavLink href="/">Bookmarks</NavLink>
               <NavLink href="/">Dashboard</NavLink>
