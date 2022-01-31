@@ -4,7 +4,6 @@ import moment from "moment";
 import Link from "next/link";
 
 const FeaturedPost = ({ post }) => {
-  console.log(post);
   return (
     <section className="lg:py-20 sm:py-16 py-10">
       <div className="max-w-7xl sm:mx-auto lg:px-8 sm:px-6 -mx-4">
