@@ -6,6 +6,7 @@ const PageHead = () => {
     <>
       <Head>
         <title>Frus Blog</title>
+        <meta name="description" content="Frus Blog" />
         <link rel="icon" href="./logo.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
